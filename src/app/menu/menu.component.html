@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Café | Artisanal Drinks</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1 class="text-5xl font-bold text-white tracking-wide mb-4">Great drinks start with Happy Café</h1>
+            <p class="text-xl italic text-rose-gold">Indulge in Artisanal Drinks Crafted with Passion</p>
+        </div>
+    </div>
+
+    <div class="menu-container max-w-7xl mx-auto px-4 py-12">
+        <header class="header text-center mb-12 border-b border-rose-gold pb-6">
+            <h1 class="text-5xl font-bold text-deep-teal tracking-wide">Our Menu</h1>
+            <p class="text-lg italic text-rose-gold mt-2">Discover the Art of Every Sip</p>
+        </header>
+
+        <div class="filter-bar mb-12 text-center">
+            <button class="px-6 py-3 mx-2 bg-cream rounded-lg font-poppins font-semibold" data-filter="all">All Drinks</button>
+            <button class="px-6 py-3 mx-2 bg-cream text-deep-teal rounded-lg font-poppins font-semibold" data-filter="coffee">Signature Coffees</button>
+            <button class="px-6 py-3 mx-2 bg-cream text-deep-teal rounded-lg font-poppins font-semibold" data-filter="tea">Specialty Teas</button>
+            <button class="px-6 py-3 mx-2 bg-cream text-deep-teal rounded-lg font-poppins font-semibold" data-filter="cold">Cold Refreshments</button>
+        </div>
+
+        <div class="menu-section" data-category="coffee">
+            <h2 class="section-title text-3xl font-bold text-deep-teal border-b-2 border-gold pb-2 mb-8 inline-block">Signature Coffees</h2>
+            <div class="drink-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="drink-card bg-white rounded-xl overflow-hidden shadow-lg" data-category="coffee">
+                    <div class="drink-image" style="background-image: url('https://cdn.shopify.com/s/files/1/0042/5099/2758/files/golden-milk-latte.jpg')"></div>
+                    <div class="drink-info p-6">
+                        <h3 class="drink-name text-xl font-bold text-deep-teal flex justify-between">Golden Happiness Latte <span class="signature-badge bg-gold text-white px-2 py-1 rounded text-sm font-bold">Signature</span></h3>
+                        <p class="drink-desc text-sm text-dark-chocolate mb-4">Our famous latte with house-made caramel, vanilla bean, and a hint of Himalayan pink salt.</p>
+                        <div class="drink-meta flex text-sm text-rose-gold mb-4">
+                            <span class="mr-4">☕ 12oz / 16oz</span>
+                            <span>🔥 180-220 cal</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button class="view-details px-4 py-2 bg-deep-teal text-orange font-poppins" data-details='{"name":"Golden Happiness Latte","desc":"Our famous latte with house-made caramel, vanilla bean, and a hint of Himalayan pink salt.","meta":"☕ 12oz / 16oz, 🔥 180-220 cal","image":"https://cdn.shopify.com/s/files/1/0042/5099/2758/files/golden-milk-latte.jpg"}'>View Details</button>
+                            <button class="order-btn px-4 py-2 bg-gold text-white rounded-lg font-poppins hover:bg-rose-gold" data-order='{"name":"Golden Happiness Latte","sizes":["12oz","16oz"]}'>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="drink-card bg-black rounded-xl overflow-hidden shadow-lg" data-category="coffee">
+                    <div class="drink-image" style="background-image: url('https://img.freepik.com/premium-photo/top-view-white-mug-mocha-coffee-isolated-white-background-file-contains-with-clipping-path-so-easy-work_24076-746.jpg')"></div>
+                    <div class="drink-info p-6">
+                        <h3 class="drink-name text-xl font-bold text-deep-teal flex justify-between">Velvet Mocha <span class="signature-badge bg-gold text-white px-2 py-1 rounded text-sm font-bold">Signature</span></h3>
+                        <p class="drink-desc text-sm text-dark-chocolate mb-4">Single-origin chocolate melted into espresso with steamed oat milk and cocoa foam.</p>
+                        <div class="drink-meta flex text-sm text-rose-gold mb-4">
+                            <span class="mr-4">☕ 12oz / 16oz</span>
+                            <span>🔥 210-260 cal</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button class="view-details px-4 py-2 bg-deep-teal text-white rounded-lg font-poppins hover:bg-gold" data-details='{"name":"Velvet Mocha","desc":"Single-origin chocolate melted into espresso with steamed oat milk and cocoa foam.","meta":"☕ 12oz / 16oz, 🔥 210-260 cal","image":"https://img.freepik.com/premium-photo/top-view-white-mug-mocha-coffee-isolated-white-background-file-contains-with-clipping-path-so-easy-work_24076-746.jpg"}'>View Details</button>
+                            <button class="order-btn px-4 py-2 bg-gold text-white rounded-lg font-poppins hover:bg-rose-gold" data-order='{"name":"Velvet Mocha","sizes":["12oz","16oz"]}'>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="drink-card bg-white rounded-xl overflow-hidden shadow-lg" data-category="coffee">
+                    <div class="drink-image" style="background-image: url('https://media.istockphoto.com/id/523168818/photo/cappuccino-with-coffee-beans.jpg?s=612x612&w=0&k=20&c=l6UmrLAWtnvJdz4zuit6R0jY5E7r2K1gWuHtBduzuBU=')"></div>
+                    <div class="drink-info p-6">
+                        <h3 class="drink-name text-xl font-bold text-deep-teal flex justify-between">Cinnamon Cloud Cappuccino</h3>
+                        <p class="drink-desc text-sm text-dark-chocolate mb-4">Double espresso with airy milk foam, dusted with Vietnamese cinnamon and nutmeg.</p>
+                        <div class="drink-meta flex text-sm text-rose-gold mb-4">
+                            <span class="mr-4">☕ 8oz / 12oz</span>
+                            <span>🔥 120-180 cal</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button class="view-details px-4 py-2 bg-deep-teal text-white rounded-lg font-poppins hover:bg-gold" data-details='{"name":"Cinnamon Cloud Cappuccino","desc":"Double espresso with airy milk foam, dusted with Vietnamese cinnamon and nutmeg.","meta":"☕ 8oz / 12oz, 🔥 120-180 cal","image":"https://media.istockphoto.com/id/523168818/photo/cappuccino-with-coffee-beans.jpg?s=612x612&w=0&k=20&c=l6UmrLAWtnvJdz4zuit6R0jY5E7r2K1gWuHtBduzuBU="}'>View Details</button>
+                            <button class="order-btn px-4 py-2 bg-gold text-white rounded-lg font-poppins hover:bg-rose-gold" data-order='{"name":"Cinnamon Cloud Cappuccino","sizes":["8oz","12oz"]}'>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="drink-card bg-white rounded-xl overflow-hidden shadow-lg" data-category="coffee">
+                    <div class="drink-image" style="background-image: url('https://staresso.com/cdn/shop/articles/What_is_a_latte.jpg?v=1716606481')"></div>
+                    <div class="drink-info p-6">
+                        <h3 class="drink-name text-xl font-bold text-deep-teal flex justify-between">Coffee Latte</h3>
+                        <p class="drink-desc text-sm text-dark-chocolate mb-4">Double latte with milk foam, dusted with Taiwan cinnamon and nutmeg.</p>
+                        <div class="drink-meta flex text-sm text-rose-gold mb-4">
+                            <span class="mr-4">☕ 8oz / 12oz</span>
+                            <span>🔥 120-180 cal</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button class="view-details px-4 py-2 bg-deep-teal text-white rounded-lg font-poppins hover:bg-gold" data-details='{"name":"Coffee Latte","desc":"Double latte with milk foam, dusted with Taiwan cinnamon and nutmeg.","meta":"☕ 8oz / 12oz, 🔥 120-180 cal","image":"https://staresso.com/cdn/shop/articles/What_is_a_latte.jpg?v=1716606481"}'>View Details</button>
+                            <button class="order-btn px-4 py-2 bg-gold text-white rounded-lg font-poppins hover:bg-rose-gold" data-order='{"name":"Coffee Latte","sizes":["8oz","12oz"]}'>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="drink-card bg-white rounded-xl overflow-hidden shadow-lg" data-category="coffee">
+                    <div class="drink-image" style="background-image: url('https://cdn.kme.si/public/images-cache/1200xX/2017/09/26/24d1cc566e09a453728a1014bb1c307a/5ba50daf9f9a5/24d1cc566e09a453728a1014bb1c307a.jpeg')"></div>
+                    <div class="drink-info p-6">
+                        <h3 class="drink-name text-xl font-bold text-deep-teal flex justify-between">Saffron Espresso Bliss <span class="signature-badge bg-gold text-white px-2 py-1 rounded text-sm font-bold">Signature</span></h3>
+                        <p class="drink-desc text-sm text-dark-chocolate mb-4">Single-origin espresso infused with saffron and a touch of cardamom cream.</p>
+                        <div class="drink-meta flex text-sm text-rose-gold mb-4">
+                            <span class="mr-4">☕ 8oz / 12oz</span>
+                            <span>🔥 140-190 cal</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button class="view-details px-4 py-2 bg-deep-teal text-white rounded-lg font-poppins hover:bg-gold" data-details='{"name":"Saffron Espresso Bliss","desc":"Single-origin espresso infused with saffron and a touch of cardamom cream.","meta":"☕ 8oz / 12oz, 🔥 140-190 cal","image":"https://cdn.kme.si/public/images-cache/1200xX/2017/09/26/24d1cc566e09a453728a1014bb1c307a/5ba50daf9f9a5/24d1cc566e09a453728a1014bb1c307a.jpeg"}'>View Details</button>
+                            <button class="order-btn px-4 py-2 bg-gold text-white rounded-lg font-poppins hover:bg-rose-gold" data-order='{"name":"Saffron Espresso Bliss","sizes":["8oz","12oz"]}'>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="drink-card bg-white rounded-xl overflow-hidden shadow-lg" data-category="coffee">
+                    <div class="drink-image" style="background-image: url('https://preview.redd.it/always-my-favorite-hazelnut-latte-v0-m6xjbw61ll1b1.jpg?width=640&crop=smart&auto=webp&s=550d096ba682d01580e0cb053b9045fdf8be271c')"></div>
+                    <div class="drink-info p-6">
+                        <h3 class="drink-name text-xl font-bold text-deep-teal flex justify-between">Hazelnut Dream Latte</h3>
+                        <p class="drink-desc text-sm text-dark-chocolate mb-4">Rich espresso with roasted hazelnut syrup and almond milk foam.</p>
+                        <div class="drink-meta flex text-sm text-rose-gold mb-4">
+                            <span class="mr-4">☕ 12oz / 16oz</span>
+                            <span>🔥 170-210 cal</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button class="view-details px-4 py-2 bg-deep-teal text-white rounded-lg font-poppins hover:bg-gold" data-details='{"name":"Hazelnut Dream Latte","desc":"Rich espresso with roasted hazelnut syrup and almond milk foam.","meta":"☕ 12oz / 16oz, 🔥 170-210 cal","image":"https://preview.redd.it/always-my-favorite-hazelnut-latte-v0-m6xjbw61ll1b1.jpg?width=640&crop=smart&auto=webp&s=550d096ba682d01580e0cb053b9045fdf8be271c"}'>View Details</button>
+                            <button class="order-btn px-4 py-2 bg-gold text-white rounded-lg font-poppins hover:bg-rose-gold" data-order='{"name":"Hazelnut Dream Latte","sizes":["12oz","16oz"]}'>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Coffee Items -->
+                <div class="drink-card bg-white rounded-xl overflow-hidden shadow-lg" data-category="coffee">
+                    <div class="drink-image" style="background-image: url('https://www.allrecipes.com/thmb/LgtetzzQWH3GMxFISSii84XEAB8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/258686-IcedCaramelMacchiato-ddmps-4x3-104704-2effb74f7d504b8aa5fbd52204d0e2e5.jpg')"></div>
+                    <div class="drink-info p-6">
+                        <h3 class="drink-name text-xl font-bold text-deep-teal flex justify-between">Caramel Macchiato Delight <span class="signature-badge bg-gold text-white px-2 py-1 rounded text-sm font-bold">Signature</span></h3>
+                        <p class="drink-desc text-sm text-dark-chocolate mb-4">Espresso with caramel, vanilla, and steamed milk, topped with caramel drizzle.</p>
+                        <div class="drink-meta flex text-sm text-rose-gold mb-4">
+                            <span class="mr-4">☕ 12oz / 16oz</span>
+                            <span>🔥 200-250 cal</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button class="view-details px-4 py-2 bg-deep-teal text-white rounded-lg font-poppins hover:bg-gold" data-details='{"name":"Caramel Macchiato Delight","desc":"Espresso with caramel, vanilla, and steamed milk, topped with caramel drizzle.","meta":"☕ 12oz / 16oz, 🔥 200-250 cal","image":"https://images.unsplash.com/photo-1599581909839-6e43baae2a0d"}'>View Details</button>
+                            <button class="order-btn px-4 py-2 bg-gold text-white rounded-lg font-poppins hover:bg-rose-gold" data-order='{"name":"Caramel Macchiato Delight","sizes":["12oz","16oz"]}'>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="drink-card bg-white rounded-xl overflow-hidden shadow-lg" data-category="coffee">
+                    <div class="drink-image" style="background-image: url('https://hungryfoodie.com/wp-content/uploads/2021/09/Pumpkin-Spice-Latte-1-2.jpg')"></div>
+                    <div class="drink-info p-6">
+                        <h3 class="drink-name text-xl font-bold text-deep-teal flex justify-between">Pumpkin Spice Latte <span class="seasonal-badge bg-deep-teal text-white px-2 py-1 rounded text-sm font-bold">Seasonal</span></h3>
+                        <p class="drink-desc text-sm text-dark-chocolate mb-4">Espresso with pumpkin puree, spices, and steamed milk, topped with whipped cream.</p>
+                        <div class="drink-meta flex text-sm text-rose-gold mb-4">
+                            <span class="mr-4">☕ 12oz / 16oz</span>
+                            <span>🔥 220-280 cal</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button class="view-details px-4 py-2 bg-deep-teal text-white rounded-lg font-poppins hover:bg-gold" data-details='{"name":"Pumpkin Spice Latte","desc":"Espresso with pumpkin puree, spices, and steamed milk, topped with whipped cream.","meta":"☕ 12oz / 16oz, 🔥 220-280 cal","image":"https://images.unsplash.com/photo-1637787955031-2e0189f6e727"}'>View Details</button>
+                            <button class="order-btn px-4 py-2 bg-gold text-white rounded-lg font-poppins hover:bg-rose-gold" data-order='{"name":"Pumpkin Spice Latte","sizes":["12oz","16oz"]}'>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="drink-card bg-white rounded-xl overflow-hidden shadow-lg" data-category="coffee">
+                    <div class="drink-image" style="background-image: url('https://www.mashed.com/img/gallery/what-is-an-affogato-and-what-does-it-taste-like/intro-1621523856.jpg')"></div>
+                    <div class="drink-info p-6">
+                        <h3 class="drink-name text-xl font-bold text-deep-teal flex justify-between">Affogato Supreme</h3>
+                        <p class="drink-desc text-sm text-dark-chocolate mb-4">Vanilla ice cream drowned in hot espresso, topped with whipped cream and chocolate shavings.</p>
+                        <div class="drink-meta flex text-sm text-rose-gold mb-4">
+                            <span class="mr-4">☕ 8oz</span>
+                            <span>🔥 250-300 cal</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button class="view-details px-4 py-2 bg-deep-teal text-white rounded-lg font-poppins hover:bg-gold" data-details='{"name":"Affogato Supreme","desc":"Vanilla ice cream drowned in hot espresso, topped with whipped cream and chocolate shavings.","meta":"☕ 8oz, 🔥 250-300 cal","image":"https://images.unsplash.com/photo-1509047079862-8d3fc6b9b1e7"}'>View Details</button>
+                            <button class="order-btn px-4 py-2 bg-gold text-white rounded-lg font-poppins hover:bg-rose-gold" data-order='{"name":"Affogato Supreme","sizes":["8oz"]}'>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-section" data-category="tea">
+            <h2 class="section-title text-3xl font-bold text-deep-teal border-b-2 border-gold pb-2 mb-8 inline-block">Specialty Teas</h2>
+            <div class="drink-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="drink-card bg-white rounded-xl overflow-hidden shadow-lg" data-category="tea">
+                    <div class="drink-image" style="background-image: url('https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9')"></div>
+                    <div class="drink-info p-6">
+                        <h3 class="drink-name text-xl font-bold text-deep-teal flex justify-between">Jasmine Pearl Cloud <span class="signature-badge bg-gold text-white px-2 py-1 rounded text-sm font-bold">Signature</span></h3>
+                        <p class="drink-desc text-sm text-dark-chocolate mb-4">Hand-rolled jasmine pearls steeped at 175°F with honey blossom foam.</p>
+                        <div class="drink-meta flex text-sm text-rose-gold mb-4">
+                            <span class="mr-4">🍵 12oz / 16oz</span>
+                            <span>❄️ 80°C perfect temp</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button class="view-details px-4 py-2 bg-deep-teal text-white rounded-lg font-poppins hover:bg-gold" data-details='{"name":"Jasmine Pearl Cloud","desc":"Hand-rolled jasmine pearls steeped at 175°F with honey blossom foam.","meta":"🍵 12oz / 16oz, ❄️ 80°C perfect temp","image":"https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9"}'>View Details</button>
+                            <button class="order-btn px-4 py-2 bg-gold text-white rounded-lg font-poppins hover:bg-rose-gold" data-order='{"name":"Jasmine Pearl Cloud","sizes":["12oz","16oz"]}'>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="drink-card bg-white rounded-xl overflow-hidden shadow-lg" data-category="tea">
+                    <div class="drink-image" style="background-image: url('https://www.budgetbytes.com/wp-content/uploads/2017/08/Golden-Chai-duo-H.jpg')"></div>
+                    <div class="drink-info p-6">
+                        <h3 class="drink-name text-xl font-bold text-deep-teal flex justify-between">Golden Turmeric Chai <span class="seasonal-badge bg-deep-teal text-white px-2 py-1 rounded text-sm font-bold">Seasonal</span></h3>
+                        <p class="drink-desc text-sm text-dark-chocolate mb-4">House-blend chai with fresh turmeric, black pepper, and coconut milk.</p>
+                        <div class="drink-meta flex text-sm text-rose-gold mb-4">
+                            <span class="mr-4">🍵 12oz / 16oz</span>
+                            <span>🔥 150-200 cal</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button class="view-details px-4 py-2 bg-deep-teal text-white rounded-lg font-poppins hover:bg-gold" data-details='{"name":"Golden Turmeric Chai","desc":"House-blend chai with fresh turmeric, black pepper, and coconut milk.","meta":"🍵 12oz / 16oz, 🔥 150-200 cal","image":"https://www.budgetbytes.com/wp-content/uploads/2017/08/Golden-Chai-duo-H.jpg"}'>View Details</button>
+                            <button class="order-btn px-4 py-2 bg-gold text-white rounded-lg font-poppins hover:bg-rose-gold" data-order='{"name":"Golden Turmeric Chai","sizes":["12oz","16oz"]}'>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="drink-card bg-white rounded-xl overflow-hidden shadow-lg" data-category="tea">
+                    <div class="drink-image" style="background-image: url('https://images.unsplash.com/photo-1558160074-4d7d8bdf4256')"></div>
+                    <div class="drink-info p-6">
+                        <h3 class="drink-name text-xl font-bold text-deep-teal flex justify-between">Earl Grey Lavender Fog</h3>
+                        <p class="drink-desc text-sm text-dark-chocolate mb-4">Bergamot-infused tea with lavender syrup and vanilla cream.</p>
+                        <div class="drink-meta flex text-sm text-rose-gold mb-4">
+                            <span class="mr-4">🍵 12oz / 16oz</span>
+                            <span>🔥 180-240 cal</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button class="view-details px-4 py-2 bg-deep-teal text-white rounded-lg font-poppins hover:bg-gold" data-details='{"name":"Earl Grey Lavender Fog","desc":"Bergamot-infused tea with lavender syrup and vanilla cream.","meta":"🍵 12oz / 16oz, 🔥 180-240 cal","image":"https://images.unsplash.com/photo-1558160074-4d7d8bdf4256"}'>View Details</button>
+                            <button class="order-btn px-4 py-2 bg-gold text-white rounded-lg font-poppins hover:bg-rose-gold" data-order='{"name":"Earl Grey Lavender Fog","sizes":["12oz","16oz"]}'>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="drink-card bg-white rounded-xl overflow-hidden shadow-lg" data-category="tea">
+                    <div class="drink-image" style="background-image: url('https://cdn.shopify.com/s/files/1/0106/7915/6799/t/3/assets/25-1629126890646.jpg')"></div>
+                    <div class="drink-info p-6">
+                        <h3 class="drink-name text-xl font-bold text-deep-teal flex justify-between">Rose Petal Oolong <span class="signature-badge bg-gold text-white px-2 py-1 rounded text-sm font-bold">Signature</span></h3>
+                        <p class="drink-desc text-sm text-dark-chocolate mb-4">Delicate oolong tea infused with rose petals and a hint of lychee.</p>
+                        <div class="drink-meta flex text-sm text-rose-gold mb-4">
+                            <span class="mr-4">🍵 12oz / 16oz</span>
+                            <span>❄️ 85°C perfect temp</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button class="view-details px-4 py-2 bg-deep-teal text-white rounded-lg font-poppins hover:bg-gold" data-details='{"name":"Rose Petal Oolong","desc":"Delicate oolong tea infused with rose petals and a hint of lychee.","meta":"🍵 12oz / 16oz, ❄️ 85°C perfect temp","image":"https://cdn.shopify.com/s/files/1/0106/7915/6799/t/3/assets/25-1629126890646.jpg"}'>View Details</button>
+                            <button class="order-btn px-4 py-2 bg-gold text-white rounded-lg font-poppins hover:bg-rose-gold" data-order='{"name":"Rose Petal Oolong","sizes":["12oz","16oz"]}'>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="drink-card bg-white rounded-xl overflow-hidden shadow-lg" data-category="tea">
+                    <div class="drink-image" style="background-image: url('https://5.imimg.com/data5/SELLER/Default/2022/3/AF/FZ/SK/131722720/organic-green-tea-500x500.jpg')"></div>
+                    <div class="drink-info p-6">
+                        <h3 class="drink-name text-xl font-bold text-deep-teal flex justify-between">Peach Blossom Green Tea <span class="seasonal-badge bg-deep-teal text-white px-2 py-1 rounded text-sm font-bold">Seasonal</span></h3>
+                        <p class="drink-desc text-sm text-dark-chocolate mb-4">Light green tea with natural peach essence and edible flower petals.</p>
+                        <div class="drink-meta flex text-sm text-rose-gold mb-4">
+                            <span class="mr-4">🍵 12oz / 16oz</span>
+                            <span>🔥 100-140 cal</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button class="view-details px-4 py-2 bg-deep-teal text-white rounded-lg font-poppins hover:bg-gold" data-details='{"name":"Peach Blossom Green Tea","desc":"Light green tea with natural peach essence and edible flower petals.","meta":"🍵 12oz / 16oz, 🔥 100-140 cal","image":"https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd"}'>View Details</button>
+                            <button class="order-btn px-4 py-2 bg-gold text-white rounded-lg font-poppins hover:bg-rose-gold" data-order='{"name":"Peach Blossom Green Tea","sizes":["12oz","16oz"]}'>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Tea Items -->
+                <div class="drink-card bg-white rounded-xl overflow-hidden shadow-lg" data-category="tea">
+                    <div class="drink-image" style="background-image: url('https://tucsontea.com/cdn/shop/files/SP-mint-chocolate-rooibos-tea.jpg?v=1707806290')"></div>
+                    <div class="drink-info p-6">
+                        <h3 class="drink-name text-xl font-bold text-deep-teal flex justify-between">Mint Chocolate Herbal Tea</h3>
+                        <p class="drink-desc text-sm text-dark-chocolate mb-4">Herbal tea infused with mint and chocolate flavors for a soothing treat.</p>
+                        <div class="drink-meta flex text-sm text-rose-gold mb-4">
+                            <span class="mr-4">🍵 12oz / 16oz</span>
+                            <span>🔥 90-130 cal</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button class="view-details px-4 py-2 bg-deep-teal text-white rounded-lg font-poppins hover:bg-gold" data-details='{"name":"Mint Chocolate Herbal Tea","desc":"Herbal tea infused with mint and chocolate flavors for a soothing treat.","meta":"🍵 12oz / 16oz, 🔥 90-130 cal","image":"https://images.unsplash.com/photo-1572196284252-6b58b42f5b47"}'>View Details</button>
+                            <button class="order-btn px-4 py-2 bg-gold text-white rounded-lg font-poppins hover:bg-rose-gold" data-order='{"name":"Mint Chocolate Herbal Tea","sizes":["12oz","16oz"]}'>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="drink-card bg-white rounded-xl overflow-hidden shadow-lg" data-category="tea">
+                    <div class="drink-image" style="background-image: url('https://cdn.foodaciously.com/static/recipes/f6a4fc8d-74e0-4e76-a8a8-5dd070d05547/butterfly-pea-blue-tea-b7977dcb17849aa2f83aa66182bec3ec-1920-q90.jpg')"></div>
+                    <div class="drink-info p-6">
+                        <h3 class="drink-name text-xl font-bold text-deep-teal flex justify-between">Butterfly Pea Flower Tea <span class="signature-badge bg-gold text-white px-2 py-1 rounded text-sm font-bold">Signature</span></h3>
+                        <p class="drink-desc text-sm text-dark-chocolate mb-4">Magical color-changing tea with butterfly pea flowers, lemon, and honey.</p>
+                        <div class="drink-meta flex text-sm text-rose-gold mb-4">
+                            <span class="mr-4">🍵 12oz / 16oz</span>
+                            <span>❄️ 75°C perfect temp</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button class="view-details px-4 py-2 bg-deep-teal text-white rounded-lg font-poppins hover:bg-gold" data-details='{"name":"Butterfly Pea Flower Tea","desc":"Magical color-changing tea with butterfly pea flowers, lemon, and honey.","meta":"🍵 12oz / 16oz, ❄️ 75°C perfect temp","image":"https://images.unsplash.com/photo-1622550447083-10f3d1b7d878"}'>View Details</button>
+                            <button class="order-btn px-4 py-2 bg-gold text-white rounded-lg font-poppins hover:bg-rose-gold" data-order='{"name":"Butterfly Pea Flower Tea","sizes":["12oz","16oz"]}'>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="drink-card bg-white rounded-xl overflow-hidden shadow-lg" data-category="tea">
+                    <div class="drink-image" style="background-image: url('https://cdn.shopify.com/s/files/1/0655/8279/2933/files/Honey_ginger_lemon_tea-3_480x480.webp?v=1721810362')"></div>
+                    <div class="drink-info p-6">
+                        <h3 class="drink-name text-xl font-bold text-deep-teal flex justify-between">Ginger Lemon Honey Tea</h3>
+                        <p class="drink-desc text-sm text-dark-chocolate mb-4">Warming tea with fresh ginger, lemon, and honey for a comforting brew.</p>
+                        <div class="drink-meta flex text-sm text-rose-gold mb-4">
+                            <span class="mr-4">🍵 12oz / 16oz</span>
+                            <span>🔥 80-120 cal</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button class="view-details px-4 py-2 bg-deep-teal text-white rounded-lg font-poppins hover:bg-gold" data-details='{"name":"Ginger Lemon Honey Tea","desc":"Warming tea with fresh ginger, lemon, and honey for a comforting brew.","meta":"🍵 12oz / 16oz, 🔥 80-120 cal","image":"https://images.unsplash.com/photo-1512568400610-3f3f5187b1c0"}'>View Details</button>
+                            <button class="order-btn px-4 py-2 bg-gold text-white rounded-lg font-poppins hover:bg-rose-gold" data-order='{"name":"Ginger Lemon Honey Tea","sizes":["12oz","16oz"]}'>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="drink-card bg-white rounded-xl overflow-hidden shadow-lg" data-category="tea">
+                    <div class="drink-image" style="background-image: url('https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/chamomile-tea.jpg?w=1155&h=1528')"></div>
+                    <div class="drink-info p-6">
+                        <h3 class="drink-name text-xl font-bold text-deep-teal flex justify-between">Chamomile Dream</h3>
+                        <p class="drink-desc text-sm text-dark-chocolate mb-4">Soothing chamomile tea with hints of apple and honey for relaxation.</p>
+                        <div class="drink-meta flex text-sm text-rose-gold mb-4">
+                            <span class="mr-4">🍵 12oz / 16oz</span>
+                            <span>❄️ 85°C perfect temp</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button class="view-details px-4 py-2 bg-deep-teal text-white rounded-lg font-poppins hover:bg-gold" data-details='{"name":"Chamomile Dream","desc":"Soothing chamomile tea with hints of apple and honey for relaxation.","meta":"🍵 12oz / 16oz, ❄️ 85°C perfect temp","image":"https://images.unsplash.com/photo-1570640837501-33f775765d92"}'>View Details</button>
+                            <button class="order-btn px-4 py-2 bg-gold text-white rounded-lg font-poppins hover:bg-rose-gold" data-order='{"name":"Chamomile Dream","sizes":["12oz","16oz"]}'>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-section" data-category="cold">
+            <h2 class="section-title text-3xl font-bold text-deep-teal border-b-2 border-gold pb-2 mb-8 inline-block">Cold Refreshments</h2>
+            <div class="drink-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="drink-card bg-white rounded-xl overflow-hidden shadow-lg" data-category="cold">
+                    <div class="drink-image" style="background-image: url('https://www.allrecipes.com/thmb/8phuC-bVeBCob5yx4rBKM7ajBsw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/21667-easy-iced-coffee-ddmfs-2x1-0091-18b743db97f5495e9e152b034e211b4c.jpg')"></div>
+                    <div class="drink-info p-6">
+                        <h3 class="drink-name text-xl font-bold text-deep-teal flex justify-between">Honeycomb Cold Brew <span class="signature-badge bg-gold text-white px-2 py-1 rounded text-sm font-bold">Signature</span></h3>
+                        <p class="drink-desc text-sm text-dark-chocolate mb-4">24-hour cold brew with house honeycomb infusion and milk cloud.</p>
+                        <div class="drink-meta flex text-sm text-rose-gold mb-4">
+                            <span class="mr-4">❄️ 12oz / 16oz</span>
+                            <span>🔥 90-140 cal</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button class="view-details px-4 py-2 bg-deep-teal text-white rounded-lg font-poppins hover:bg-gold" data-details='{"name":"Honeycomb Cold Brew","desc":"24-hour cold brew with house honeycomb infusion and milk cloud.","meta":"❄️ 12oz / 16oz, 🔥 90-140 cal","image":"https://images.unsplash.com/photo-1551029506-0807df4e2031"}'>View Details</button>
+                            <button class="order-btn px-4 py-2 bg-gold text-white rounded-lg font-poppins hover:bg-rose-gold" data-order='{"name":"Honeycomb Cold Brew","sizes":["12oz","16oz"]}'>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="drink-card bg-white rounded-xl overflow-hidden shadow-lg" data-category="cold">
+                    <div class="drink-image" style="background-image: url('https://www.liquor.com/thmb/yWmaU3CvMcGJ8W0FMYOgICn5qfs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/StrawberryBasilLemonade-1200x628-email-6012debad9d54cfebdb13dc0ea9d0659.jpg')"></div>
+                    <div class="drink-info p-6">
+                        <h3 class="drink-name text-xl font-bold text-deep-teal flex justify-between">Strawberry Basil Lemonade <span class="seasonal-badge bg-deep-teal text-white px-2 py-1 rounded text-sm font-bold">Seasonal</span></h3>
+                        <p class="drink-desc text-sm text-dark-chocolate mb-4">Fresh-pressed strawberries, basil syrup, and sparkling lemonade.</p>
+                        <div class="drink-meta flex text-sm text-rose-gold mb-4">
+                            <span class="mr-4">❄️ 16oz only</span>
+                            <span>🔥 160 cal</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button class="view-details px-4 py-2 bg-deep-teal text-white rounded-lg font-poppins hover:bg-gold" data-details='{"name":"Strawberry Basil Lemonade","desc":"Fresh-pressed strawberries, basil syrup, and sparkling lemonade.","meta":"❄️ 16oz only, 🔥 160 cal","image":"https://itsavegworldafterall.com/wp-content/uploads/2021/05/Strawberry-Basil-Lemonade-6.jpg"}'>View Details</button>
+                            <button class="order-btn px-4 py-2 bg-gold text-white rounded-lg font-poppins hover:bg-rose-gold" data-order='{"name":"Strawberry Basil Lemonade","sizes":["16oz"]}'>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="drink-card bg-white rounded-xl overflow-hidden shadow-lg" data-category="cold">
+                    <div class="drink-image" style="background-image: url('https://images.unsplash.com/photo-1551751299-1b51cab2694c')"></div>
+                    <div class="drink-info p-6">
+                        <h3 class="drink-name text-xl font-bold text-deep-teal flex justify-between">Matcha Coconut Shakerato</h3>
+                        <p class="drink-desc text-sm text-dark-chocolate mb-4">Ceremonial matcha shaken with coconut water and agave over ice.</p>
+                        <div class="drink-meta flex text-sm text-rose-gold mb-4">
+                            <span class="mr-4">❄️ 12oz / 16oz</span>
+                            <span>🔥 110-150 cal</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button class="view-details px-4 py-2 bg-deep-teal text-white rounded-lg font-poppins hover:bg-gold" data-details='{"name":"Matcha Coconut Shakerato","desc":"Ceremonial matcha shaken with coconut water and agave over ice.","meta":"❄️ 12oz / 16oz, 🔥 110-150 cal","image":"https://images.unsplash.com/photo-1551751299-1b51cab2694c"}'>View Details</button>
+                            <button class="order-btn px-4 py-2 bg-gold text-white rounded-lg font-poppins hover:bg-rose-gold" data-order='{"name":"Matcha Coconut Shakerato","sizes":["12oz","16oz"]}'>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="drink-card bg-white rounded-xl overflow-hidden shadow-lg" data-category="cold">
+                    <div class="drink-image" style="background-image: url('https://images.ctfassets.net/tlircn1cnxbm/3r35F8qVtSNCnaumrSJC2T/5b42d731c047051908b3cdec813a71a3/11593461_mango-passionfruit-lemonade-cocktaill.png')"></div>
+                    <div class="drink-info p-6">
+                        <h3 class="drink-name text-xl font-bold text-deep-teal flex justify-between">Mango Passion Spritz <span class="seasonal-badge bg-deep-teal text-white px-2 py-1 rounded text-sm font-bold">Seasonal</span></h3>
+                        <p class="drink-desc text-sm text-dark-chocolate mb-4">Mango puree and passion fruit juice with sparkling water.</p>
+                        <div class="drink-meta flex text-sm text-rose-gold mb-4">
+                            <span class="mr-4">❄️ 16oz only</span>
+                            <span>🔥 140 cal</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button class="view-details px-4 py-2 bg-deep-teal text-white rounded-lg font-poppins hover:bg-gold" data-details='{"name":"Mango Passion Spritz","desc":"Mango puree and passion fruit juice with sparkling water.","meta":"❄️ 16oz only, 🔥 140 cal","image":"https://images.ctfassets.net/tlircn1cnxbm/3r35F8qVtSNCnaumrSJC2T/5b42d731c047051908b3cdec813a71a3/11593461_mango-passionfruit-lemonade-cocktaill.png"}'>View Details</button>
+                            <button class="order-btn px-4 py-2 bg-gold text-white rounded-lg font-poppins hover:bg-rose-gold" data-order='{"name":"Mango Passion Spritz","sizes":["16oz"]}'>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="drink-card bg-white rounded-xl overflow-hidden shadow-lg" data-category="cold">
+                    <div class="drink-image" style="background-image: url('https://www.cafedumonde.co.uk/media/ovnh0ajw/vanilla-latte-iced.jpg?rxy=0.5059901448688706,0.7340941714560172&width=540&height=540&v=1dbd6bb0409a150')"></div>
+                    <div class="drink-info p-6">
+                        <h3 class="drink-name text-xl font-bold text-deep-teal flex justify-between">Iced Vanilla Orchid Latte</h3>
+                        <p class="drink-desc text-sm text-dark-chocolate mb-4">Cold brew with vanilla orchid syrup and oat milk cream.</p>
+                        <div class="drink-meta flex text-sm text-rose-gold mb-4">
+                            <span class="mr-4">❄️ 12oz / 16oz</span>
+                            <span>🔥 130-170 cal</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button class="view-details px-4 py-2 bg-deep-teal text-white rounded-lg font-poppins hover:bg-gold" data-details='{"name":"Iced Vanilla Orchid Latte","desc":"Cold brew with vanilla orchid syrup and oat milk cream.","meta":"❄️ 12oz / 16oz, 🔥 130-170 cal","image":"https://www.cafedumonde.co.uk/media/ovnh0ajw/vanilla-latte-iced.jpg?rxy=0.5059901448688706,0.7340941714560172&width=540&height=540&v=1dbd6bb0409a150"}'>View Details</button>
+                            <button class="order-btn px-4 py-2 bg-gold text-white rounded-lg font-poppins hover:bg-rose-gold" data-order='{"name":"Iced Vanilla Orchid Latte","sizes":["12oz","16oz"]}'>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Cold Items -->
+                <div class="drink-card bg-white rounded-xl overflow-hidden shadow-lg" data-category="cold">
+                    <div class="drink-image" style="background-image: url('https://i0.wp.com/melscoffeetravels.com/wp-content/uploads/2023/10/IMG_1565-scaled.jpg?fit=2560%2C1706&ssl=1')"></div>
+                    <div class="drink-info p-6">
+                        <h3 class="drink-name text-xl font-bold text-deep-teal flex justify-between">Nitro Cold Brew</h3>
+                        <p class="drink-desc text-sm text-dark-chocolate mb-4">Smooth nitro-infused cold brew with a creamy cascade.</p>
+                        <div class="drink-meta flex text-sm text-rose-gold mb-4">
+                            <span class="mr-4">❄️ 12oz / 16oz</span>
+                            <span>🔥 5 cal</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button class="view-details px-4 py-2 bg-deep-teal text-white rounded-lg font-poppins hover:bg-gold" data-details='{"name":"Nitro Cold Brew","desc":"Smooth nitro-infused cold brew with a creamy cascade.","meta":"❄️ 12oz / 16oz, 🔥 5 cal","image":"https://images.unsplash.com/photo-1563809699-5e93875dd271"}'>View Details</button>
+                            <button class="order-btn px-4 py-2 bg-gold text-white rounded-lg font-poppins hover:bg-rose-gold" data-order='{"name":"Nitro Cold Brew","sizes":["12oz","16oz"]}'>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="drink-card bg-white rounded-xl overflow-hidden shadow-lg" data-category="cold">
+                    <div class="drink-image" style="background-image: url('https://thirstytales.com/wp-content/uploads/2025/02/Blueberry-Ginger-Sparkler-Mocktail-Recipe.jpg')"></div>
+                    <div class="drink-info p-6">
+                        <h3 class="drink-name text-xl font-bold text-deep-teal flex justify-between">Blueberry Lemonade Sparkler <span class="seasonal-badge bg-deep-teal text-white px-2 py-1 rounded text-sm font-bold">Seasonal</span></h3>
+                        <p class="drink-desc text-sm text-dark-chocolate mb-4">Fresh blueberries muddled with lemon juice and sparkling water.</p>
+                        <div class="drink-meta flex text-sm text-rose-gold mb-4">
+                            <span class="mr-4">❄️ 16oz only</span>
+                            <span>🔥 120 cal</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button class="view-details px-4 py-2 bg-deep-teal text-white rounded-lg font-poppins hover:bg-gold" data-details='{"name":"Blueberry Lemonade Sparkler","desc":"Fresh blueberries muddled with lemon juice and sparkling water.","meta":"❄️ 16oz only, 🔥 120 cal","image":"https://images.unsplash.com/photo-1622627443979-8b8e735d1a5e"}'>View Details</button>
+                            <button class="order-btn px-4 py-2 bg-gold text-white rounded-lg font-poppins hover:bg-rose-gold" data-order='{"name":"Blueberry Lemonade Sparkler","sizes":["16oz"]}'>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="drink-card bg-white rounded-xl overflow-hidden shadow-lg" data-category="cold">
+                    <div class="drink-image" style="background-image: url('https://food.fnr.sndimg.com/content/dam/images/food/fullset/2023/7/19/FNM090123-coconut-coffee-frappe_s4x3.jpg.rend.hgtvcom.616.462.suffix/1689795881801.webp')"></div>
+                    <div class="drink-info p-6">
+                        <h3 class="drink-name text-xl font-bold text-deep-teal flex justify-between">Coconut Mocha Frappe</h3>
+                        <p class="drink-desc text-sm text-dark-chocolate mb-4">Blended mocha with coconut milk, topped with whipped cream.</p>
+                        <div class="drink-meta flex text-sm text-rose-gold mb-4">
+                            <span class="mr-4">❄️ 16oz only</span>
+                            <span>🔥 280 cal</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button class="view-details px-4 py-2 bg-deep-teal text-white rounded-lg font-poppins hover:bg-gold" data-details='{"name":"Coconut Mocha Frappe","desc":"Blended mocha with coconut milk, topped with whipped cream.","meta":"❄️ 16oz only, 🔥 280 cal","image":"https://images.unsplash.com/photo-1495474472287-45d8a129ae09"}'>View Details</button>
+                            <button class="order-btn px-4 py-2 bg-gold text-white rounded-lg font-poppins hover:bg-rose-gold" data-order='{"name":"Coconut Mocha Frappe","sizes":["16oz"]}'>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="drink-card bg-white rounded-xl overflow-hidden shadow-lg" data-category="cold">
+                    <div class="drink-image" style="background-image: url('https://www.marthastewart.com/thmb/N30bgwJtToogYl-YJTaV6DwSTic=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/ms-watermelon-lime-mint-cooler-0821-onecms-796bcc6f1c5b44beb8baf46bf31a8e88-4044850732724559820f347b59c5f914.jpg')"></div>
+                    <div class="drink-info p-6">
+                        <h3 class="drink-name text-xl font-bold text-deep-teal flex justify-between">Watermelon Mint Cooler</h3>
+                        <p class="drink-desc text-sm text-dark-chocolate mb-4">Fresh watermelon blended with mint and lime for a refreshing cooler.</p>
+                        <div class="drink-meta flex text-sm text-rose-gold mb-4">
+                            <span class="mr-4">❄️ 16oz only</span>
+                            <span>🔥 100 cal</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button class="view-details px-4 py-2 bg-deep-teal text-white rounded-lg font-poppins hover:bg-gold" data-details='{"name":"Watermelon Mint Cooler","desc":"Fresh watermelon blended with mint and lime for a refreshing cooler.","meta":"❄️ 16oz only, 🔥 100 cal","image":"https://images.unsplash.com/photo-1622627443979-8b8e735d1a5e"}'>View Details</button>
+                            <button class="order-btn px-4 py-2 bg-gold text-white rounded-lg font-poppins hover:bg-rose-gold" data-order='{"name":"Watermelon Mint Cooler","sizes":["16oz"]}'>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="text-center mt-12 pt-8 border-t border-rose-gold text-rose-gold text-sm">
+            <p>All drinks can be customized with your choice of milk - ask your barista about seasonal specials!</p>
+            <p>Happy Café © 2025 | Crafted with Joy in Every Sip</p>
+        </footer>
+    </div>
+
+    <div class="modal" id="drinkModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-image h-64 bg-cover bg-center rounded-t-lg" id="modalImage"></div>
+            <div class="p-6">
+                <h3 class="text-2xl font-bold text-deep-teal mb-4" id="modalName"></h3>
+                <p class="text-sm text-dark-chocolate mb-4" id="modalDesc"></p>
+                <div class="text-sm text-rose-gold" id="modalMeta"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="orderModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="p-6">
+                <h3 class="text-2xl font-bold text-deep-teal mb-4" id="orderName">Order Your Drink</h3>
+                <div class="order-form">
+                    <div class="mb-4">
+                        <label for="orderSize" class="block text-sm font-semibold mb-2">Size</label>
+                        <select id="orderSize" class="w-full p-2">
+                            <!-- Options populated dynamically -->
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="milkType" class="block text-sm font-semibold mb-2">Milk Type</label>
+                        <select id="milkType" class="w-full p-2">
+                            <option value="whole">Whole Milk</option>
+                            <option value="oat">Oat Milk</option>
+                            <option value="almond">Almond Milk</option>
+                            <option value="soy">Soy Milk</option>
+                            <option value="none">None</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="sweetness" class="block text-sm font-semibold mb-2">Sweetness Level</label>
+                        <select id="sweetness" class="w-full p-2">
+                            <option value="regular">Regular</option>
+                            <option value="less">Less Sweet</option>
+                            <option value="none">No Sweetener</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="notes" class="block text-sm font-semibold mb-2">Additional Notes</label>
+                        <textarea id="notes" class="w-full p-2" rows="4" placeholder="E.g., Extra foam, decaf, etc."></textarea>
+                    </div>
+                    <button class="px-6 py-3 bg-gold text-white rounded-lg font-poppins w-full hover:bg-rose-gold">Place Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- Modal fade helpers ---
+            function showModal(modal) {
+                modal.style.display = 'flex';
+                setTimeout(() => modal.classList.add('show'), 10);
+                document.body.style.overflow = 'hidden';
+            }
+            function hideModal(modal) {
+                modal.classList.remove('show');
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = '';
+                }, 200);
+            }
+
+            // --- Modal elements ---
+            const detailModal = document.getElementById('drinkModal');
+            const modalImage = document.getElementById('modalImage');
+            const modalName = document.getElementById('modalName');
+            const modalDesc = document.getElementById('modalDesc');
+            const modalMeta = document.getElementById('modalMeta');
+            const orderModal = document.getElementById('orderModal');
+            const orderName = document.getElementById('orderName');
+            const orderSize = document.getElementById('orderSize');
+
+            // --- Attach modal listeners to all buttons ---
+            function attachModalListeners() {
+                // Remove previous listeners by cloning (prevents stacking)
+                document.querySelectorAll('.view-details').forEach(btn => {
+                    const newBtn = btn.cloneNode(true);
+                    btn.parentNode.replaceChild(newBtn, btn);
+                });
+                document.querySelectorAll('.order-btn').forEach(btn => {
+                    const newBtn = btn.cloneNode(true);
+                    btn.parentNode.replaceChild(newBtn, btn);
+                });
+
+                // Attach to new buttons
+                document.querySelectorAll('.view-details').forEach(button => {
+                    button.addEventListener('click', function () {
+                        const details = JSON.parse(button.getAttribute('data-details'));
+                        modalImage.style.backgroundImage = `url(${details.image})`;
+                        modalName.textContent = details.name;
+                        modalDesc.textContent = details.desc;
+                        modalMeta.textContent = details.meta;
+                        hideModal(orderModal);
+                        showModal(detailModal);
+                    });
+                });
+
+                document.querySelectorAll('.order-btn').forEach(button => {
+                    button.addEventListener('click', function () {
+                        const orderData = JSON.parse(button.getAttribute('data-order'));
+                        orderName.textContent = `Order ${orderData.name}`;
+                        orderSize.innerHTML = orderData.sizes.map(size => `<option value="${size}">${size}</option>`).join('');
+                        hideModal(detailModal);
+                        showModal(orderModal);
+                    });
+                });
+            }
+
+            // --- Filter functionality ---
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const menuSections = document.querySelectorAll('.menu-section');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const filter = button.getAttribute('data-filter');
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    menuSections.forEach(section => {
+                        if (filter === 'all' || section.getAttribute('data-category') === filter) {
+                            section.style.display = 'block';
+                        } else {
+                            section.style.display = 'none';
+                        }
+                    });
+
+                    // Re-attach modal listeners after filtering
+                    attachModalListeners();
+                });
+            });
+
+            // Initial attach
+            attachModalListeners();
+
+            // --- Close modals ---
+            function closeAllModals() {
+                hideModal(detailModal);
+                hideModal(orderModal);
+            }
+            document.querySelectorAll('.close-btn').forEach(btn => {
+                btn.addEventListener('click', closeAllModals);
+            });
+            window.addEventListener('click', function (e) {
+                if (e.target === detailModal) hideModal(detailModal);
+                if (e.target === orderModal) hideModal(orderModal);
+            });
+
+            // --- Smooth scrolling for anchor links ---
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
