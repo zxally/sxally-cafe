@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Café | Artisanal Drinks</title>
+    <title>Sxally Café | Artisanal Drinks</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="hero-section">
         <div class="hero-content">
-            <h1 class="text-5xl font-bold text-white tracking-wide mb-4">Great drinks start with Happy Café</h1>
+            <h1 class="text-5xl font-bold text-white tracking-wide mb-4">Great drinks start with Sxally Café</h1>
             <p class="text-xl italic text-rose-gold">Indulge in Artisanal Drinks Crafted with Passion</p>
         </div>
     </div>
@@ -19,16 +19,19 @@
         <header class="header text-center mb-12 border-b border-rose-gold pb-6">
             <h1 class="text-5xl font-bold text-deep-teal tracking-wide">Our Menu</h1>
             <p class="text-lg italic text-rose-gold mt-2">Discover the Art of Every Sip</p>
+            <p class="text-md text-dark-chocolate mt-2">Explore our curated selection of artisanal drinks, each crafted to perfection.</p>
         </header>
 
-        <div class="filter-bar mb-12 text-center">
-            <button class="px-6 py-3 mx-2 bg-cream rounded-lg font-poppins font-semibold" data-filter="all">All Drinks</button>
-            <button class="px-6 py-3 mx-2 bg-cream text-deep-teal rounded-lg font-poppins font-semibold" data-filter="coffee">Signature Coffees</button>
-            <button class="px-6 py-3 mx-2 bg-cream text-deep-teal rounded-lg font-poppins font-semibold" data-filter="tea">Specialty Teas</button>
-            <button class="px-6 py-3 mx-2 bg-cream text-deep-teal rounded-lg font-poppins font-semibold" data-filter="cold">Cold Refreshments</button>
+
+        <div class="filter-bar mb-12 text-center" role="tablist">
+            <button class="px-6 py-3 mx-2 bg-cream rounded-lg font-poppins font-semibold active" data-filter="all" aria-label="Show all drinks" role="tab" aria-selected="true">All Drinks</button>
+            <button class="px-6 py-3 mx-2 bg-cream text-deep-teal rounded-lg font-poppins font-semibold" data-filter="coffee" aria-label="Show signature coffees" role="tab" aria-selected="false">Signature Coffees</button>
+            <button class="px-6 py-3 mx-2 bg-cream text-deep-teal rounded-lg font-poppins font-semibold" data-filter="tea" aria-label="Show specialty teas" role="tab" aria-selected="false">Specialty Teas</button>
+            <button class="px-6 py-3 mx-2 bg-cream text-deep-teal rounded-lg font-poppins font-semibold" data-filter="cold" aria-label="Show cold refreshments" role="tab" aria-selected="false">Cold Refreshments</button>
         </div>
 
         <div class="menu-section" data-category="coffee">
+            
             <h2 class="section-title text-3xl font-bold text-deep-teal border-b-2 border-gold pb-2 mb-8 inline-block">Signature Coffees</h2>
             <div class="drink-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="drink-card bg-white rounded-xl overflow-hidden shadow-lg" data-category="coffee">
@@ -477,12 +480,13 @@
             <span class="close-btn">&times;</span>
             <div class="p-6">
                 <h3 class="text-2xl font-bold text-deep-teal mb-4" id="orderName">Order Your Drink</h3>
-                <div class="order-form">
+                <form class="order-form" id="orderForm">
                     <div class="mb-4">
                         <label for="orderSize" class="block text-sm font-semibold mb-2">Size</label>
-                        <select id="orderSize" class="w-full p-2">
-                            <!-- Options populated dynamically -->
+                        <select id="orderSize" class="w-full p-2" required>
+                            <option value="">Select Size</option>
                         </select>
+                        <p class="error hidden" id="orderSizeError">Please select a size.</p>
                     </div>
                     <div class="mb-4">
                         <label for="milkType" class="block text-sm font-semibold mb-2">Milk Type</label>
@@ -491,6 +495,7 @@
                             <option value="oat">Oat Milk</option>
                             <option value="almond">Almond Milk</option>
                             <option value="soy">Soy Milk</option>
+                            <option value="coconut">Coconut Milk</option>
                             <option value="none">None</option>
                         </select>
                     </div>
@@ -503,21 +508,71 @@
                         </select>
                     </div>
                     <div class="mb-4">
-                        <label for="notes" class="block text-sm font-semibold mb-2">Additional Notes</label>
-                        <textarea id="notes" class="w-full p-2" rows="4" placeholder="E.g., Extra foam, decaf, etc."></textarea>
+                        <label for="temperature" class="block text-sm font-semibold mb-2">Temperature</label>
+                        <select id="temperature" class="w-full p-2">
+                            <option value="hot">Hot</option>
+                            <option value="iced">Iced</option>
+                            <option value="blended">Blended</option>
+                        </select>
                     </div>
-                    <button class="px-6 py-3 bg-gold text-white rounded-lg font-poppins w-full hover:bg-rose-gold">Place Order</button>
-                </div>
+                    <div class="mb-4">
+                        <label for="extras" class="block text-sm font-semibold mb-2">Extras</label>
+                        <div class="flex flex-wrap gap-2">
+                            <label class="flex items-center">
+                                <input type="checkbox" name="extras" value="extra-shot" class="mr-2">
+                                Extra Shot
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" name="extras" value="whipped-cream" class="mr-2">
+                                Whipped Cream
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" name="extras" value="caramel-drizzle" class="mr-2">
+                                Caramel Drizzle
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" name="extras" value="chocolate-drizzle" class="mr-2">
+                                Chocolate Drizzle
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label for="notes" class="block text-sm font-semibold mb-2">Special Instructions</label>
+                        <textarea id="notes" class="w-full p-2" rows="3" placeholder="Any special requests? (e.g., decaf, extra foam, etc.)"></textarea>
+                    </div>
+                    <div class="mb-4">
+                        <label for="quantity" class="block text-sm font-semibold mb-2">Quantity</label>
+                        <input type="number" id="quantity" class="w-full p-2" min="1" max="10" value="1">
+                    </div>
+                    <div class="mb-4">
+                        <label for="name" class="block text-sm font-semibold mb-2">Your Name</label>
+                        <input type="text" id="name" class="w-full p-2" placeholder="Enter your name" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="phone" class="block text-sm font-semibold mb-2">Phone Number</label>
+                        <input type="tel" id="phone" class="w-full p-2" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="pickup-time" class="block text-sm font-semibold mb-2">Pickup Time</label>
+                        <input type="time" id="pickup-time" class="w-full p-2" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="total-price" class="block text-sm font-semibold mb-2">Total Price</label>
+                        <div id="total-price" class="text-xl font-bold text-deep-teal">$0.00</div>
+                    </div>
+                    <button type="submit" class="px-6 py-3 bg-gold text-white rounded-lg font-poppins w-full hover:bg-rose-gold" id="placeOrderBtn">Place Order</button>
+                </form>
             </div>
         </div>
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // --- Modal fade helpers ---
+            // Modal fade helpers
             function showModal(modal) {
                 modal.style.display = 'flex';
                 setTimeout(() => modal.classList.add('show'), 10);
                 document.body.style.overflow = 'hidden';
+                modal.querySelector('.modal-content').focus();
             }
             function hideModal(modal) {
                 modal.classList.remove('show');
@@ -527,7 +582,7 @@
                 }, 200);
             }
 
-            // --- Modal elements ---
+            // Modal elements
             const detailModal = document.getElementById('drinkModal');
             const modalImage = document.getElementById('modalImage');
             const modalName = document.getElementById('modalName');
@@ -536,24 +591,19 @@
             const orderModal = document.getElementById('orderModal');
             const orderName = document.getElementById('orderName');
             const orderSize = document.getElementById('orderSize');
+            const orderForm = document.getElementById('orderForm');
+            const placeOrderBtn = document.getElementById('placeOrderBtn');
+            const orderSizeError = document.getElementById('orderSizeError');
 
-            // --- Attach modal listeners to all buttons ---
+            // Attach modal listeners to all buttons
             function attachModalListeners() {
-                // Remove previous listeners by cloning (prevents stacking)
-                document.querySelectorAll('.view-details').forEach(btn => {
-                    const newBtn = btn.cloneNode(true);
-                    btn.parentNode.replaceChild(newBtn, btn);
-                });
-                document.querySelectorAll('.order-btn').forEach(btn => {
-                    const newBtn = btn.cloneNode(true);
-                    btn.parentNode.replaceChild(newBtn, btn);
-                });
-
-                // Attach to new buttons
                 document.querySelectorAll('.view-details').forEach(button => {
-                    button.addEventListener('click', function () {
-                        const details = JSON.parse(button.getAttribute('data-details'));
+                    const newBtn = button.cloneNode(true);
+                    button.parentNode.replaceChild(newBtn, button);
+                    newBtn.addEventListener('click', function () {
+                        const details = JSON.parse(this.getAttribute('data-details'));
                         modalImage.style.backgroundImage = `url(${details.image})`;
+                        modalImage.setAttribute('aria-label', `${details.name} image`);
                         modalName.textContent = details.name;
                         modalDesc.textContent = details.desc;
                         modalMeta.textContent = details.meta;
@@ -563,43 +613,72 @@
                 });
 
                 document.querySelectorAll('.order-btn').forEach(button => {
-                    button.addEventListener('click', function () {
-                        const orderData = JSON.parse(button.getAttribute('data-order'));
+                    const newBtn = button.cloneNode(true);
+                    button.parentNode.replaceChild(newBtn, button);
+                    newBtn.addEventListener('click', function () {
+                        const orderData = JSON.parse(this.getAttribute('data-order'));
                         orderName.textContent = `Order ${orderData.name}`;
                         orderSize.innerHTML = orderData.sizes.map(size => `<option value="${size}">${size}</option>`).join('');
+                        orderSizeError.classList.add('hidden');
                         hideModal(detailModal);
                         showModal(orderModal);
                     });
                 });
             }
 
-            // --- Filter functionality ---
-            const filterButtons = document.querySelectorAll('.filter-btn');
+            // Filter functionality - Enhanced
+            const filterButtons = document.querySelectorAll('[data-filter]');
             const menuSections = document.querySelectorAll('.menu-section');
 
             filterButtons.forEach(button => {
                 button.addEventListener('click', function () {
-                    const filter = button.getAttribute('data-filter');
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    button.classList.add('active');
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Update active state
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                        btn.classList.add('text-deep-teal');
+                        btn.setAttribute('aria-selected', 'false');
+                    });
+                    this.classList.add('active');
+                    this.classList.remove('text-deep-teal');
+                    this.setAttribute('aria-selected', 'true');
 
+                    // Filter sections with smooth transition
                     menuSections.forEach(section => {
-                        if (filter === 'all' || section.getAttribute('data-category') === filter) {
+                        const sectionCategory = section.getAttribute('data-category');
+                        if (filter === 'all' || sectionCategory === filter) {
                             section.style.display = 'block';
+                            section.style.opacity = '0';
+                            section.setAttribute('aria-hidden', 'false');
+                            
+                            // Fade in effect
+                            setTimeout(() => {
+                                section.style.transition = 'opacity 0.3s ease';
+                                section.style.opacity = '1';
+                            }, 50);
                         } else {
-                            section.style.display = 'none';
+                            section.style.transition = 'opacity 0.3s ease';
+                            section.style.opacity = '0';
+                            setTimeout(() => {
+                                section.style.display = 'none';
+                                section.setAttribute('aria-hidden', 'true');
+                            }, 300);
                         }
                     });
 
-                    // Re-attach modal listeners after filtering
+                    // Re-attach modal listeners for newly visible elements
                     attachModalListeners();
                 });
             });
 
-            // Initial attach
-            attachModalListeners();
+            // Initialize with "All Drinks" active
+            const allDrinksBtn = document.querySelector('[data-filter="all"]');
+            if (allDrinksBtn) {
+                allDrinksBtn.click();
+            }
 
-            // --- Close modals ---
+            // Close modals
             function closeAllModals() {
                 hideModal(detailModal);
                 hideModal(orderModal);
@@ -611,8 +690,29 @@
                 if (e.target === detailModal) hideModal(detailModal);
                 if (e.target === orderModal) hideModal(orderModal);
             });
+            window.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') closeAllModals();
+            });
 
-            // --- Smooth scrolling for anchor links ---
+            // Form submission
+            orderForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                if (!orderSize.value) {
+                    orderSizeError.classList.remove('hidden');
+                    return;
+                }
+                placeOrderBtn.classList.add('loading');
+                placeOrderBtn.textContent = 'Loading...';
+                setTimeout(() => {
+                    alert('Order placed successfully!');
+                    placeOrderBtn.classList.remove('loading');
+                    placeOrderBtn.textContent = 'Place Order';
+                    hideModal(orderModal);
+                    orderForm.reset();
+                }, 1000);
+            });
+
+            // Smooth scrolling for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
